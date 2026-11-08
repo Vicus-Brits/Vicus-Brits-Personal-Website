@@ -1,0 +1,14 @@
+---
+import { ArrowUpRight } from '@lucide/astro'
+import { site } from '../config/site'
+---
+<section class="connect-section" id="connect" aria-labelledby="connect-title">
+  <div class="container connect-grid">
+    <div><p class="eyebrow">CONNECT</p><h2 id="connect-title">Let's Connect<span>.</span></h2></div>
+    <div class="connect-copy">
+      <p>I'm always interested in conversations about business transformation, enterprise technology, AI-enabled engineering and the future of how organisations operate.</p>
+      <p>I particularly enjoy connecting with people who are turning ambitious ideas into practical business outcomes.</p>
+      <a class="button button-light" href={site.linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+  </div>
+</section>

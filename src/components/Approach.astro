@@ -1,0 +1,27 @@
+---
+import SectionHeading from './SectionHeading.astro'
+const pillars = [
+  { title: 'DEFINE', text: 'Understand the problem, challenge assumptions and establish the outcomes that matter.' },
+  { title: 'DESIGN', text: 'Make deliberate choices about architecture, capabilities, trade-offs and how the solution will evolve.' },
+  { title: 'DELIVER', text: 'Turn strategy into working solutions through disciplined execution, collaboration and ownership.' },
+  { title: 'DEFEND', text: 'Challenge the results through independent verification, testing, controls and continuous monitoring.' },
+]
+---
+<section class="section approach-section" aria-labelledby="approach-title">
+  <div class="container">
+    <div class="approach-header">
+      <SectionHeading label="MY APPROACH" title="Define. Design. Deliver. Defend." id="approach-title" />
+      <p>A simple philosophy for turning complex business and technology challenges into sustainable outcomes.</p>
+    </div>
+    <div class="pillar-grid">
+      {pillars.map((pillar, index) => (
+        <article class="pillar">
+          <span class="pillar-number">0{index + 1}</span>
+          <h3>{pillar.title}</h3>
+          <p>{pillar.text}</p>
+        </article>
+      ))}
+    </div>
+    <p class="approach-closing">Technology enables the solution. <strong>Human judgement remains accountable for the outcome.</strong></p>
+  </div>
+</section>

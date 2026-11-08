@@ -1,0 +1,24 @@
+---
+import { site } from '../config/site'
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <a href="/" class="wordmark">VICUS <span>BRITS</span><span class="wordmark-dot" aria-hidden="true">.</span></a>
+        <p>Business &amp; Technology Transformation</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        {site.footerNavigation.map((item) => (
+          <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener noreferrer' : undefined}>
+            {item.label}{item.external && <span class="sr-only"> (opens in a new tab)</span>}
+          </a>
+        ))}
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>Thinking in systems. Building for change.</p>
+      <p>© 2026 Vicus Brits. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

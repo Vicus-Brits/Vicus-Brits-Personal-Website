@@ -1,0 +1,30 @@
+---
+import { Menu } from '@lucide/astro'
+import { site } from '../config/site'
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="wordmark" aria-label="Vicus Brits home">VICUS <span>BRITS</span><span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {site.navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <details class="mobile-menu">
+      <summary aria-label="Toggle navigation"><Menu size={23} stroke-width={1.6} aria-hidden="true" /></summary>
+      <nav aria-label="Mobile navigation">
+        {site.navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu')
+  menu?.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('a')) menu.open = false
+  })
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu?.open) {
+      menu.open = false
+      menu.querySelector('summary')?.focus()
+    }
+  })
+</script>

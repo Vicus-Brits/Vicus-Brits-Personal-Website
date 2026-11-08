@@ -1,0 +1,69 @@
+---
+import { ArrowUpRight, FlaskConical, Lightbulb } from '@lucide/astro'
+import { site } from '../config/site'
+import SectionHeading from './SectionHeading.astro'
+
+const streams = [
+  {
+    eyebrow: '01 / THE EXPERIMENT',
+    title: 'The Lab',
+    subtitle: 'One Human. AI in the Loop.',
+    paragraphs: [
+      'A practical experiment exploring what one person can build with AI and what that means for the future of software engineering and business.',
+      "I'm documenting the journey from idea to working software, including the architecture, engineering, decisions, mistakes, costs and lessons learned.",
+      "The objective isn't to prove that AI can replace people. It's to understand how AI changes what's possible, and where human judgement and accountability remain essential.",
+    ],
+    cta: 'Follow the Experiment',
+    href: site.labSection || site.publication,
+    Icon: FlaskConical,
+  },
+  {
+    eyebrow: '02 / THE THINKING',
+    title: 'Perspectives',
+    subtitle: 'Ideas, observations and questions worth exploring.',
+    paragraphs: [
+      'My reflections on business, technology, AI, leadership, people and the changing world.',
+      "Sometimes inspired by what's happening in The Lab. Sometimes by something I've read, experienced or observed.",
+      'Not every article needs to reach a conclusion. Some are simply about asking better questions.',
+    ],
+    cta: 'Explore Perspectives',
+    href: site.perspectivesSection || site.publication,
+    Icon: Lightbulb,
+  },
+]
+---
+<section class="section writing-section" id="writing" aria-labelledby="writing-title">
+  <div class="container">
+    <div class="writing-intro">
+      <div class="section-topline"><SectionHeading label="WRITING & IDEAS" title="Ideas worth exploring." id="writing-title" /><span class="section-number" aria-hidden="true">03 / 03</span></div>
+      <div class="body-copy">
+        <p>I write about the things that interest me, challenge my thinking and occasionally change my mind.</p>
+        <p>Some ideas come from practical experimentation. Others come from experience, observation or simply being curious about the world around us.</p>
+        <p>This is where I explore those ideas, ask questions and share what I learn.</p>
+      </div>
+    </div>
+    <div class="writing-grid">
+      {streams.map(({ eyebrow, title, subtitle, paragraphs, cta, href, Icon }) => (
+        <article class="writing-card">
+          <div class="writing-card-top">
+            <span class="writing-card-eyebrow">{eyebrow}</span>
+            <span class="icon-box"><Icon size={22} stroke-width={1.5} aria-hidden="true" /></span>
+          </div>
+          <h3>{title}</h3>
+          <p class="writing-card-subtitle">{subtitle}</p>
+          <div class="writing-card-copy">
+            {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+          <a class="writing-card-link" href={href} target="_blank" rel="noopener noreferrer">{cta} <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+        </article>
+      ))}
+    </div>
+    <div class="newsletter">
+      <div>
+        <h3>Follow the thinking. Follow the experiment.</h3>
+        <p>Two streams of writing. One exploring what we can build. The other exploring what we think, question and learn along the way.</p>
+      </div>
+      <a class="button button-primary" href={site.publication} target="_blank" rel="noopener noreferrer">Read &amp; Subscribe on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import { ArrowDownRight, ArrowUpRight } from '@lucide/astro'
+import { site } from '../config/site'
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-line"></span> BUSINESS &amp; TECHNOLOGY EXECUTIVE</p>
+      <h1 id="hero-title">Transforming Business <span>Through Technology.</span></h1>
+      <div class="hero-description">
+        <p>I work at the intersection of business strategy, technology and execution, exploring how modern architecture, AI and human judgement can fundamentally change how organisations operate.</p>
+        <p>I bring together business understanding and technical expertise to build capabilities that deliver meaningful outcomes.</p>
+      </div>
+      <div class="button-group">
+        <a class="button button-primary" href="#lab">Explore the Lab <ArrowDownRight size={17} aria-hidden="true" /></a>
+        <a class="button button-text" href={site.linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      {site.portrait ? (
+        <img class="portrait" src={site.portrait} alt="Vicus Brits" />
+      ) : (
+        <div class="portrait-placeholder" aria-hidden="true">
+          <div class="portrait-lines"></div>
+          <span class="portrait-monogram">VB<span>.</span></span>
+          <span class="portrait-caption">BUSINESS <span>×</span> TECHNOLOGY</span>
+        </div>
+      )}
+      <div class="hero-quote">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <p>AI makes generation abundant. <strong>Judgement remains scarce.</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="container hero-bottom"><span>STRATEGY</span><span class="hero-bottom-dot"></span><span>TECHNOLOGY</span><span class="hero-bottom-dot"></span><span>EXECUTION</span></div>
+</section>

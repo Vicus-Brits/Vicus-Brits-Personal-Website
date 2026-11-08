@@ -6,23 +6,22 @@ export const site = {
   description:
     'Vicus Brits is a business and technology executive exploring enterprise transformation, AI-enabled engineering, architecture and the future of human-led technology delivery.',
   linkedIn,
-  publication: 'https://writing.vicusbrits.com',
-  labSection: null as string | null,
-  perspectivesSection: null as string | null,
-  experiment: linkedIn,
+  publication: 'https://vicusbrits.substack.com',
+  labSection: 'https://vicusbrits.substack.com/s/the-lab-one-human-ai-in-the-loop',
+  perspectivesSection: 'https://vicusbrits.substack.com/s/perspectives-ideas-observations-and',
   // Place a portrait in public/ and set this to its root-relative URL.
   portrait: null as string | null,
   navigation: [
-    { label: 'About', href: '#about' },
-    { label: 'Focus', href: '#focus' },
     { label: 'The Lab', href: '#lab' },
     { label: 'Writing', href: '#writing' },
     { label: 'Connect', href: '#connect' },
+    { label: 'About', href: '#about' },
+    { label: 'Focus', href: '#focus' },
   ],
   footerNavigation: [
-    { label: 'About', href: '#about', external: false },
     { label: 'The Lab', href: '#lab', external: false },
     { label: 'Writing', href: '#writing', external: false },
+    { label: 'About', href: '#about', external: false },
     { label: 'LinkedIn', href: linkedIn, external: true },
   ],
 }

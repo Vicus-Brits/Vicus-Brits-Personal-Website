@@ -34,7 +34,7 @@ If port 8080 is already in use, stop the other container or change the host port
 
 ## Configuration and content
 
-- Edit `src/config/site.ts` to update navigation, LinkedIn, publication and section URLs, the featured experiment destination, or the portrait. The writing cards use the main publication URL until `labSection` and `perspectivesSection` are configured. The featured experiment link leads to LinkedIn until its dedicated destination exists.
+- Edit `src/config/site.ts` to update navigation, LinkedIn, the publication and its section URLs, or the portrait. Both experiment links use `labSection`; the Perspectives card uses `perspectivesSection`.
 - To use a portrait, put the image in `public` and set `portrait` to its root-relative path, for example `/portrait.jpg`. Keep the image appropriately sized for the web.
 - Homepage sections are separate components in `src/components`; the page composition is in `src/pages/index.astro`. Global design styles are in `src/styles/global.css`.
 - Set the canonical production URL in `astro.config.mjs` if the domain changes. SEO metadata is in `src/layouts/Layout.astro`; the LinkedIn sharing image is `public/social-card.png`, with its editable SVG source in `src/assets/social-card.svg`.

@@ -1,0 +1,65 @@
+---
+import { ArrowLeft, ArrowUpRight } from '@lucide/astro'
+import Footer from '../../components/Footer.astro'
+import Header from '../../components/Header.astro'
+import { site } from '../../config/site'
+import { techbookResources } from '../../config/techbook'
+import Layout from '../../layouts/Layout.astro'
+---
+<Layout title="TechBook | The Lab | Vicus Brits" description="Explore TechBook, a practical experiment in AI-assisted software engineering and its project resources.">
+  <Header />
+  <main id="main">
+    <section class="techbook-hero" aria-labelledby="techbook-title">
+      <div class="container">
+        <a class="techbook-back" href="/#lab"><ArrowLeft size={18} aria-hidden="true" /> Back to The Lab</a>
+        <p class="eyebrow">THE LAB / EXPERIMENT 01</p>
+        <h1 id="techbook-title">TechBook<span>.</span></h1>
+        <p class="techbook-lead">AI is making software easier to build. But is it making software better engineered?</p>
+        <div class="body-copy techbook-overview">
+          <p>TechBook is the first Lab project: a practical experiment exploring how one person can use AI to build software while maintaining clarity, control, understanding and trust.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section techbook-section" id="resources" aria-labelledby="resources-title">
+      <div class="container">
+        <p class="eyebrow">PROJECT ARTEFACTS</p>
+        <h2 id="resources-title">Resource library.</h2>
+        <p class="body-copy techbook-intro">Documents, diagrams and AI skills will be shared here as they become available.</p>
+        <div class="techbook-resource-grid">
+          {techbookResources.map((category) => (
+            <section class="techbook-resource" aria-labelledby={`resource-${category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+              <h3 id={`resource-${category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{category.title}</h3>
+              {category.resources.length > 0 ? (
+                <ul>
+                  {category.resources.map((resource) => (
+                    <li>
+                      <a href={resource.url}>{resource.name}</a>
+                      <p>{resource.description}</p>
+                      <span>{resource.version}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : <p>Coming soon.</p>}
+            </section>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="section techbook-section" id="articles" aria-labelledby="articles-title">
+      <div class="container">
+        <p class="eyebrow">THE LAB &middot; TECHBOOK</p>
+        <h2 id="articles-title">Articles.</h2>
+        <article class="writing-card featured-article" aria-labelledby="techbook-article-title">
+          <h3 id="techbook-article-title">Define. Design. Deliver. Defend | Engineering Software in the Age of AI</h3>
+          <div class="writing-card-copy">
+            <p>AI is making software easier to build. But is it making software better engineered?</p>
+            <p>Introducing <strong>TechBook</strong>, the first LAB project, where I explore modern AI engineering through four disciplines: <strong>Define clearly. Design deliberately. Deliver with understanding. Defend relentlessly.</strong></p>
+            <p>As AI takes on more of the coding, the real challenge shifts to maintaining clarity, control, understanding and trust.</p>
+          </div>
+          <a class="writing-card-link" href={site.techbookArticle} target="_blank" rel="noopener noreferrer">Read the article on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

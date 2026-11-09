@@ -39,6 +39,7 @@ If port 8080 is already in use, stop the other container or change the host port
 - Homepage sections are separate components in `src/components`; the page composition is in `src/pages/index.astro`. Global design styles are in `src/styles/global.css`.
 - Set the canonical production URL in `astro.config.mjs` if the domain changes. SEO metadata is in `src/layouts/Layout.astro`; the LinkedIn sharing image is `public/social-card.png`, with its editable SVG source in `src/assets/social-card.svg`.
 - The writing cards represent publication streams. Add or update article previews in `src/components/Writing.astro` when articles are published.
+- TechBook's project hub is at `/lab/techbook/`. Add resource entries in `src/config/techbook.ts`. Put public files in `public/` and use root-relative resource URLs, such as `/techbook/architecture.pdf`; include a description and date or version. Empty resource categories show "Coming soon". Review every file for secrets, personal information and confidential material before publishing. Resources are updated with a website deployment.
 
 ## Deploy to Coolify
 

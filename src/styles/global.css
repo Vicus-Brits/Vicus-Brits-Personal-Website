@@ -103,7 +103,10 @@ h3 { font-weight: 650; }
 .lab-section { padding-bottom: clamp(2.5rem, 4vw, 4rem); }
 .lab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 7vw, 7rem); margin-top: 3.5rem; }
 .lab-copy h3 { color: #14283f; font-size: 1.22rem; letter-spacing: -.02em; line-height: 1.5; }
-.lab-copy .button { margin-top: .8rem; }
+.lab-actions { margin-top: 2rem; }
+.lab-action-tooltip { position: relative; display: inline-flex; max-width: 100%; }
+.lab-tooltip-text { position: absolute; z-index: 2; bottom: 100%; left: 0; width: min(20rem, 80vw); padding: .8rem 1rem; background: #14283f; color: #fff; font-size: .8rem; line-height: 1.5; visibility: hidden; }
+.lab-action-tooltip:hover .lab-tooltip-text, .lab-action-tooltip:focus-within .lab-tooltip-text { visibility: visible; }
 .lab-preview { background: #14283f; color: #b7cbd0; padding: 1.35rem; }
 .preview-header, .preview-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: .57rem; font-weight: 700; letter-spacing: .13em; }
 .preview-header { padding-bottom: 1.1rem; border-bottom: 1px solid #ffffff29; }
@@ -134,13 +137,28 @@ h3 { font-weight: 650; }
 .writing-card-link { display: inline-flex; align-items: center; align-self: flex-start; gap: .75rem; margin-top: auto; padding-top: 1rem; font-size: .85rem; font-weight: 700; transition: color .2s; }
 .writing-card-link:hover { color: #287f86; }
 .featured-article { margin-top: 1rem; }
-.lab-article { margin-top: 3.5rem; }
-.featured-article h3, .featured-article .writing-card-copy { max-width: 760px; }
+.featured-article h2, .featured-article h3, .featured-article .writing-card-copy { max-width: 760px; }
 .featured-article .writing-card-eyebrow { margin-bottom: 1.5rem; }
 .newsletter { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #dce3e6; }
 .newsletter h3 { margin-bottom: .65rem; font-size: 1.25rem; line-height: 1.3; }
 .newsletter p { max-width: 650px; margin-bottom: 0; color: #586976; font-size: .9rem; line-height: 1.75; }
 .newsletter .button { flex-shrink: 0; }
+.techbook-hero { padding-block: clamp(4rem, 7vw, 7rem); background: #f4f6f8; }
+.techbook-back { display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; margin-bottom: 3rem; padding: .7rem 1rem; border: 1px solid #287f86; color: #185e64; background: #fff; font-size: .9rem; font-weight: 700; transition: background .2s, color .2s; }
+.techbook-back:hover { background: #287f86; color: #fff; }
+.techbook-hero h1 { margin-bottom: 1.25rem; }
+.techbook-lead { max-width: 760px; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 600; line-height: 1.5; }
+.techbook-overview, .techbook-intro { max-width: 760px; }
+.techbook-section h2 { max-width: 800px; margin-bottom: 1.5rem; }
+.techbook-resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+.techbook-resource { padding: 1.5rem; background: #f4f6f8; }
+.techbook-resource h3 { margin-bottom: .75rem; font-size: 1.15rem; }
+.techbook-resource p, .techbook-resource li { color: #586976; font-size: .9rem; line-height: 1.7; }
+.techbook-resource p:last-child { margin-bottom: 0; }
+.techbook-resource ul { padding-left: 1.2rem; }
+.techbook-resource li + li { margin-top: 1rem; }
+.techbook-resource li p { margin: .25rem 0; }
+.techbook-resource a { color: #287f86; font-weight: 700; text-decoration: underline; }
 .connect-section { padding-block: clamp(5rem, 8vw, 7.5rem); background: #287f86; color: #fff; }
 .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 8rem); }
 .connect-section .eyebrow { color: #d5efeb; }
@@ -183,6 +201,7 @@ h3 { font-weight: 650; }
   .approach-header > p { margin: 1.5rem 0 0; }
   .lab-grid { gap: 3rem; }
   .writing-grid { grid-template-columns: 1fr; }
+  .techbook-resource-grid { grid-template-columns: 1fr; }
   .newsletter { align-items: flex-start; flex-direction: column; }
   .footer-main, .footer-bottom { flex-direction: column; gap: 1.5rem; }
 }

@@ -8,13 +8,19 @@ import SectionHeading from './SectionHeading.astro'
     <div class="section-topline"><SectionHeading label="THE LAB" title="One Human. AI in the Loop." id="lab-title" /><span class="section-number" aria-hidden="true">01 / 03</span></div>
     <div class="lab-grid">
       <div class="body-copy lab-copy">
-        <h3>An experiment in the future of software engineering.</h3>
-        <p>What happens when one experienced business and technology leader uses AI to perform much of the work traditionally undertaken by a software engineering team?</p>
-        <p>I'm exploring this question through a practical experiment: developing a financial-services application using AI-enabled analysis, architecture, engineering, testing and deployment.</p>
-        <p>The objective is not to prove that AI can replace people.</p>
-        <p>It's to understand how AI changes the economics, capabilities and operating models of technology delivery, and where human expertise remains essential.</p>
-        <p>I'll document the journey, including the decisions, architecture, tools, experiments, mistakes, costs and lessons learned.</p>
-        <a class="button button-primary" href={site.labSection} target="_blank" rel="noopener noreferrer">Follow the Experiment <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+        <h3>TechBook: an experiment in the future of software engineering.</h3>
+        <p>What happens when one experienced business and technology leader uses AI to undertake work traditionally shared across a software engineering team?</p>
+        <p>TechBook is my practical experiment in building software with AI supporting analysis, architecture, engineering, testing and deployment.</p>
+        <p>The goal isn't to prove that AI can replace people. It's to understand how AI changes the economics, capabilities and operating models of technology delivery, and where human expertise, judgement and accountability remain essential.</p>
+        <p>I'm documenting the journey: the decisions, architecture, tools, experiments, mistakes, costs and lessons learned.</p>
+        <p><strong>Explore the project documentation or follow the experiment on Substack.</strong></p>
+        <div class="button-group lab-actions">
+          <span class="lab-action-tooltip">
+            <a class="button button-primary" href="/lab/techbook/" aria-describedby="techbook-link-description">Visit TechBook Documentation <ArrowUpRight size={17} aria-hidden="true" /></a>
+            <span class="lab-tooltip-text" id="techbook-link-description" role="tooltip">Explore the TechBook article and project resources, including documents, diagrams and AI skills as they are published.</span>
+          </span>
+          <a class="button button-text" href={site.labSection} target="_blank" rel="noopener noreferrer">Follow the Experiment on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
       </div>
       <div class="lab-visual">
         <div class="lab-preview" aria-label="Conceptual project preview placeholder">
@@ -29,15 +35,5 @@ import SectionHeading from './SectionHeading.astro'
         <blockquote>If one person can build something substantial with AI, what could an organisation achieve by fundamentally rethinking how its teams work?</blockquote>
       </div>
     </div>
-    <article class="writing-card featured-article lab-article" aria-labelledby="techbook-article-title">
-      <p class="writing-card-eyebrow">THE LAB &middot; TECHBOOK</p>
-      <h3 id="techbook-article-title">Define. Design. Deliver. Defend | Engineering Software in the Age of AI</h3>
-      <div class="writing-card-copy">
-        <p>AI is making software easier to build. But is it making software better engineered?</p>
-        <p>Introducing <strong>TechBook</strong>, the first LAB project, where I explore modern AI engineering through four disciplines: <strong>Define clearly. Design deliberately. Deliver with understanding. Defend relentlessly.</strong></p>
-        <p>As AI takes on more of the coding, the real challenge shifts to maintaining clarity, control, understanding and trust.</p>
-      </div>
-      <a class="writing-card-link" href="https://vicusbrits.substack.com/p/define-design-deliver-defend-engineering" target="_blank" rel="noopener noreferrer">Read the full article on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
-    </article>
   </div>
 </section>

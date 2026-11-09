@@ -150,6 +150,28 @@ h3 { font-weight: 650; }
 .techbook-lead { max-width: 760px; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 600; line-height: 1.5; }
 .techbook-overview, .techbook-intro { max-width: 760px; }
 .techbook-section h2 { max-width: 800px; margin-bottom: 1.5rem; }
+.techbook-plan { background: #f4f6f8; }
+.techbook-plan-intro, .plan-sequencing .body-copy { max-width: 850px; }
+.techbook-plan-intro strong { color: #14283f; }
+.plan-phase { margin-top: 3rem; }
+.plan-phase h3, .plan-outcomes h3, .plan-sequencing h3 { font-size: 1.4rem; line-height: 1.35; }
+.plan-phase h3 span { color: #536271; font-weight: 450; }
+.plan-steps { display: grid; gap: .75rem; }
+.plan-step { background: #fff; border: 1px solid #e6ebed; }
+.plan-step summary { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem; cursor: pointer; font-weight: 700; list-style: none; }
+.plan-step summary::-webkit-details-marker { display: none; }
+.plan-step summary::after { content: "+"; margin-left: auto; color: #287f86; font-size: 1.4rem; }
+.plan-step[open] summary::after { content: "−"; }
+.plan-number { color: #287f86; font-size: .8rem; letter-spacing: .08em; }
+.plan-step-content { padding: 0 1.5rem 1.5rem; color: #536271; font-size: .95rem; line-height: 1.75; overflow-wrap: anywhere; }
+.plan-step-content h4 { margin: 1.5rem 0 .5rem; color: #14283f; }
+.plan-step-content ul { padding-left: 1.3rem; }
+.plan-completion { margin: 1.5rem 0 0; padding-left: 1rem; border-left: 3px solid #d6a65a; }
+.plan-outcomes, .plan-sequencing { margin-top: 3.5rem; }
+.plan-outcome-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.plan-outcome-grid > div { padding: 1.5rem; background: #fff; border-top: 2px solid #287f86; }
+.plan-outcome-grid h4 { margin: 0 0 .5rem; }
+.plan-outcome-grid p { margin: 0; color: #586976; font-size: .9rem; line-height: 1.7; }
 .techbook-resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
 .techbook-resource { padding: 1.5rem; background: #f4f6f8; }
 .techbook-resource h3 { margin-bottom: .75rem; font-size: 1.15rem; }
@@ -201,7 +223,7 @@ h3 { font-weight: 650; }
   .approach-header > p { margin: 1.5rem 0 0; }
   .lab-grid { gap: 3rem; }
   .writing-grid { grid-template-columns: 1fr; }
-  .techbook-resource-grid { grid-template-columns: 1fr; }
+  .techbook-resource-grid, .plan-outcome-grid { grid-template-columns: 1fr; }
   .newsletter { align-items: flex-start; flex-direction: column; }
   .footer-main, .footer-bottom { flex-direction: column; gap: 1.5rem; }
 }

@@ -1,0 +1,158 @@
+---
+const phases = [
+  {
+    name: 'DEFINE',
+    subtitle: 'Define clearly',
+    steps: [
+      {
+        number: '01',
+        title: 'Requirements Agent',
+        description: ['Configure a custom Requirements Agent in GitHub Copilot. It interviews us about TechBook, challenges ambiguity and documents functional and non-functional requirements.'],
+        deliverables: ['requirements.agent.md — Copilot agent configuration', 'requirements.md — Approved application requirements', 'business-rules.md — Booking and pricing rules'],
+        complete: 'We can clearly explain what TechBook must do, including exceptions and business constraints.',
+      },
+      {
+        number: '02',
+        title: 'Spec-Driven Development',
+        description: ['Convert requirements into structured feature specifications and explicit acceptance criteria. Establish the test conditions before writing application code.'],
+        deliverables: ['specifications/ — Individual feature specifications', 'acceptance-criteria.md — Testable success conditions', 'Initial acceptance test scenarios'],
+        complete: 'Every core feature has a clear definition of success that can be independently verified.',
+      },
+      {
+        number: '03',
+        title: 'Context Engineering',
+        description: ['Create a shared knowledge base and instructions for the development agents. Define how agents access the correct requirements, architectural decisions, business rules and coding standards.'],
+        deliverables: ['AGENTS.md — Common agent instructions', 'docs/ — Structured project knowledge', 'Context references for each agent role'],
+        complete: 'Agents can work from consistent, version-controlled project knowledge, with the context supplied to changes traceable.',
+      },
+    ],
+  },
+  {
+    name: 'DESIGN',
+    subtitle: 'Design deliberately',
+    steps: [
+      {
+        number: '04',
+        title: 'Architecture Agent',
+        description: ['Configure an Architecture Agent to propose and challenge the application architecture. Deliberately assign responsibilities to frontend, backend, booking agent, MCP server and database.'],
+        deliverables: ['architecture.agent.md — Custom Copilot agent', 'architecture.md — Approved architecture and diagrams', 'Architecture Decision Records (ADRs)', 'Docker container and network design'],
+        complete: 'We understand and approve every major component, integration and technology decision.',
+      },
+      {
+        number: '05',
+        title: 'MCP and Tool Contracts',
+        description: ["Design the actual Model Context Protocol interface between the AI booking agent and the application's business capabilities.", 'Define tools for discovering technicians, checking availability, obtaining quotations, reserving appointments, confirming bookings and rescheduling.'],
+        deliverables: ['mcp-contracts.md — Tool definitions, inputs, outputs and errors', 'Structured tool schemas', 'Authorisation and transaction rules', 'MCP contract validation tests'],
+        complete: 'All seven MCP tools have approved, testable interface contracts before implementation.',
+      },
+      {
+        number: '06',
+        title: 'Agent Orchestration',
+        description: ['Design how the runtime OpenAI booking agent reasons, maintains conversation state, selects tools, handles exceptions and seeks human approval.'],
+        deliverables: ['agent-workflow.md — Runtime workflow design', 'State transition and error recovery diagrams', 'Agent instruction and tool-access policies', 'Defined customer approval points'],
+        complete: 'We can trace a complete booking journey, including failures, from initial request to confirmation.',
+      },
+    ],
+  },
+  {
+    name: 'DELIVER',
+    subtitle: 'Deliver with understanding',
+    steps: [
+      {
+        number: '07',
+        title: 'Agentic Coding',
+        description: ['Use Copilot coding agents to implement the application in small, understandable increments, following the approved specifications and architecture.', 'Build the deterministic booking backend, database, MCP server and a basic end-to-end booking flow.'],
+        deliverables: ['Working Spring Boot backend', 'PostgreSQL schema and seed data', 'Operational MCP server', 'First functioning booking workflow', 'Version-controlled code and automated tests'],
+        complete: 'A booking can be created through the real application interfaces, with persistence, business rules and automated tests working correctly.',
+      },
+      {
+        number: '08',
+        title: 'Parallel Specialist Agents',
+        description: ['Introduce specialised Copilot development agents for the frontend, backend, MCP integration and runtime AI agent. Assign bounded tasks using shared contracts and separate Git worktrees or branches.'],
+        deliverables: ['Specialist agent configurations', 'React conversational interface', 'OpenAI-powered runtime booking agent', 'Integrated frontend, backend and MCP functionality', 'Demonstrable multi-agent development workflow'],
+        complete: 'Separate development agents contribute working components that integrate into one functional application.',
+      },
+      {
+        number: '09',
+        title: 'Human-in-the-Loop Checkpoints',
+        description: ['Introduce explicit engineering approval gates for material changes and releases. Implement customer confirmation before TechBook commits a booking.'],
+        deliverables: ['Engineering approval workflow', 'Customer booking confirmation process', 'Recorded approvals and decisions', 'Enforcement of approval requirements'],
+        complete: 'Neither development workflows nor customer bookings can bypass their required approval controls.',
+      },
+    ],
+  },
+  {
+    name: 'DEFEND',
+    subtitle: 'Defend relentlessly',
+    steps: [
+      {
+        number: '10',
+        title: 'Supervisor / Assurance Agent',
+        description: ['Configure an independent Assurance Supervisor to assess implementation against approved requirements, architecture and engineering standards.', 'Initially use a Copilot Custom Agent. Give it access to independent specifications, code changes and actual test evidence.'],
+        deliverables: ['assurance.agent.md — Supervisor configuration', 'Requirements-to-implementation traceability', 'Automated review workflow', 'Evidence-backed assurance report'],
+        complete: 'The Supervisor can independently identify gaps, report findings and recommend whether changes are ready for human release approval.',
+      },
+      {
+        number: '11',
+        title: 'Evaluator and Red-Team Agents',
+        description: ['Create specialist evaluation capabilities for functional correctness, security, concurrency, malformed inputs and unexpected MCP behaviour.', 'Execute independent tests, including double-booking attempts, invalid authorisation and tool failures.'],
+        deliverables: ['Evaluator and Red-Team agent configurations', 'Automated functional, integration and security test suites', 'Adversarial scenarios and recorded results', 'Defect register and regression evidence'],
+        complete: 'Independent test executions provide evidence of correctness and unsafe actions are blocked, with critical defects resolved.',
+      },
+      {
+        number: '12',
+        title: 'Continuous AI Assurance',
+        description: ['Deploy TechBook on Hostinger using Docker. Add operational monitoring, agent traces, MCP execution logs, application health checks and automated alerting.', 'Protect sensitive information in logs and ensure the assurance process can reconstruct important decisions and failures.'],
+        deliverables: ['Deployed TechBook application', 'Docker Compose deployment configuration', 'Operational assurance dashboard', 'Agent and MCP execution traces', 'Automated monitoring and alert rules', 'Final engineering documentation'],
+        complete: 'TechBook operates on the VPS, important activity is traceable and monitoring detects meaningful failures.',
+      },
+    ],
+  },
+]
+---
+<section class="section techbook-section techbook-plan" id="plan" aria-labelledby="plan-title">
+  <div class="container">
+    <p class="eyebrow">THE PLAN</p>
+    <h2 id="plan-title">TechBook — 12-Step AI Engineering Build Plan</h2>
+    <div class="body-copy techbook-plan-intro">
+      <p><strong>Objective:</strong> Build and deploy TechBook, an AI-powered technical service booking application, while implementing all 12 modern AI engineering concepts under Define • Design • Deliver • Defend.</p>
+      <p>We will use GitHub Copilot in VS Code for development, OpenAI for the application's reasoning, Java/Spring Boot, React, PostgreSQL and an MCP server. Deployment will be on Hostinger using Docker, independently of your personal website.</p>
+      <p>Each step will have a clear deliverable and completion criterion. We move forward when the deliverable is acceptable, not simply when AI says the work is finished.</p>
+    </div>
+    {phases.map((phase) => (
+      <section class="plan-phase" aria-labelledby={`phase-${phase.name.toLowerCase()}`}>
+        <h3 id={`phase-${phase.name.toLowerCase()}`}>{phase.name} <span>— {phase.subtitle}</span></h3>
+        <div class="plan-steps">
+          {phase.steps.map((step) => (
+            <details class="plan-step">
+              <summary><span class="plan-number">{step.number}</span><span>{step.title}</span></summary>
+              <div class="plan-step-content">
+                {step.description.map((paragraph) => <p>{paragraph}</p>)}
+                <h4>Deliverables</h4>
+                <ul>{step.deliverables.map((item) => <li>{item}</li>)}</ul>
+                <p class="plan-completion"><strong>Complete when:</strong> {step.complete}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+    ))}
+    <section class="plan-outcomes" aria-labelledby="plan-outcomes-title">
+      <h3 id="plan-outcomes-title">What we'll have at the end</h3>
+      <div class="plan-outcome-grid">
+        <div><h4>Defined</h4><p>Approved requirements, specifications, acceptance criteria and agent context.</p></div>
+        <div><h4>Designed</h4><p>Documented architecture, MCP contracts and agent orchestration.</p></div>
+        <div><h4>Delivered</h4><p>A functioning AI-powered technical booking system built using agentic coding practices.</p></div>
+        <div><h4>Defended</h4><p>Independent assurance, automated testing, traceability and continuous monitoring.</p></div>
+      </div>
+    </section>
+    <section class="plan-sequencing" aria-labelledby="plan-sequencing-title">
+      <h3 id="plan-sequencing-title">A practical point about sequencing</h3>
+      <div class="body-copy">
+        <p>Although the plan has 12 steps, I would not defer all testing until Steps 10–12. Acceptance criteria begin in Step 2, automated testing starts with the first code in Step 7, and assurance evolves as we build.</p>
+        <p>Likewise, the agent roles are introduced when needed rather than creating a large agent infrastructure upfront.</p>
+        <p>My recommendation: Treat each step as a small, reviewable engineering milestone. We finish with a working TechBook application and, equally importantly, a documented approach to AI-native enterprise software engineering that we can explain, challenge and develop further through the LAB.</p>
+      </div>
+    </section>
+  </div>
+</section>

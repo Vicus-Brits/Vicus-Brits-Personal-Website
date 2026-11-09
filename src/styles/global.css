@@ -56,6 +56,7 @@ h3 { font-weight: 650; }
 .button-text { padding-inline: 0; }
 .button-text:hover { color: #287f86; }
 .portrait, .portrait-placeholder { display: block; width: 100%; aspect-ratio: 4 / 4.65; object-fit: cover; background: #dce5e6; }
+.portrait { max-width: 360px; margin-left: auto; object-position: center top; }
 .portrait-placeholder { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(2rem, 4vw, 3rem); background: #dce7e7; }
 .portrait-lines { position: absolute; inset: 9% -38% 27% 26%; border: 1px solid #287f8640; border-radius: 50%; }
 .portrait-lines::before, .portrait-lines::after { position: absolute; content: ""; inset: 12%; border: 1px solid #287f8640; border-radius: 50%; }

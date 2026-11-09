@@ -9,8 +9,7 @@ export const site = {
   publication: 'https://vicusbrits.substack.com',
   labSection: 'https://vicusbrits.substack.com/s/the-lab-one-human-ai-in-the-loop',
   perspectivesSection: 'https://vicusbrits.substack.com/s/perspectives-ideas-observations-and',
-  // Place a portrait in public/ and set this to its root-relative URL.
-  portrait: null as string | null,
+  portrait: '/vicus-brits.webp' as string | null,
   navigation: [
     { label: 'The Lab', href: '#lab' },
     { label: 'Writing', href: '#writing' },

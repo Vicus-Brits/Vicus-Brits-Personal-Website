@@ -38,7 +38,7 @@ If port 8080 is already in use, stop the other container or change the host port
 - To use a portrait, put the image in `public` and set `portrait` to its root-relative path, for example `/portrait.jpg`. Keep the image appropriately sized for the web.
 - Homepage sections are separate components in `src/components`; the page composition is in `src/pages/index.astro`. Global design styles are in `src/styles/global.css`.
 - Set the canonical production URL in `astro.config.mjs` if the domain changes. SEO metadata is in `src/layouts/Layout.astro`; the LinkedIn sharing image is `public/social-card.png`, with its editable SVG source in `src/assets/social-card.svg`.
-- The writing cards represent publication streams. Update the featured Perspectives article in `src/components/Writing.astro` when a new article is published.
+- The writing cards represent publication streams. Add or update article previews in `src/components/Writing.astro` when articles are published.
 
 ## Deploy to Coolify
 

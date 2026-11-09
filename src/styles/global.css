@@ -100,6 +100,7 @@ h3 { font-weight: 650; }
 .pillar p { margin-bottom: 0; color: #bdcbd3; font-size: .88rem; line-height: 1.75; }
 .approach-closing { margin: 3.8rem 0 0; padding-top: 1.7rem; border-top: 1px solid #ffffff36; color: #bdcbd3; font-size: 1rem; line-height: 1.7; }
 .approach-closing strong { color: #fff; }
+.lab-section { padding-bottom: clamp(2.5rem, 4vw, 4rem); }
 .lab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 7vw, 7rem); margin-top: 3.5rem; }
 .lab-copy h3 { color: #14283f; font-size: 1.22rem; letter-spacing: -.02em; line-height: 1.5; }
 .lab-copy .button { margin-top: .8rem; }
@@ -119,6 +120,7 @@ h3 { font-weight: 650; }
 .preview-footer { padding-top: 1.1rem; border-top: 1px solid #ffffff29; }
 .lab-visual blockquote { margin: 2rem 0 0; padding-left: 1.4rem; border-left: 3px solid #d6a65a; font-size: clamp(1.1rem, 1.5vw, 1.3rem); font-weight: 600; line-height: 1.6; letter-spacing: -.025em; }
 .writing-section { background: #f4f6f8; }
+.lab-section + .writing-section { padding-top: clamp(2.5rem, 4vw, 4rem); }
 .writing-intro > .body-copy { max-width: 720px; margin-top: 1.8rem; }
 .writing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 3.5rem; }
 .writing-card { display: flex; flex-direction: column; padding: clamp(1.6rem, 2.5vw, 2.4rem); background: #fff; border: 1px solid #e6ebed; transition: transform .2s, border-color .2s; }

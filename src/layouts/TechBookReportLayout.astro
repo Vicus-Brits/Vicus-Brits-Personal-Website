@@ -1,0 +1,22 @@
+---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import Layout from './Layout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <Header />
+  <main id="main">
+    <section class="section techbook-section market-research-section">
+      <div class="container">
+        <a class="techbook-back" href="/lab/techbook">Back to TechBook</a>
+        <article class="market-research-content">
+          <slot />
+        </article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

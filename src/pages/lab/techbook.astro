@@ -21,6 +21,75 @@ import Layout from '../../layouts/Layout.astro'
         </div>
       </div>
     </section>
+    <section class="section techbook-phase-overview" aria-label="TechBook engineering phases">
+      <div class="container">
+        <nav class="techbook-phase-nav" aria-label="Explore the four TechBook phases">
+          <a href="#define"><span>01</span> DEFINE</a>
+          <a href="#design"><span>02</span> DESIGN</a>
+          <a href="#deliver"><span>03</span> DELIVER</a>
+          <a href="#defend"><span>04</span> DEFEND</a>
+        </nav>
+
+        <section class="techbook-phase techbook-phase-define" id="define" aria-labelledby="define-title">
+          <p class="eyebrow">PHASE 01 / DEFINE</p>
+          <h2 id="define-title">Human First.<br />AI in the Loop.</h2>
+          <p class="techbook-phase-lead">From business intent to independently assured requirements.</p>
+          <p>The first phase of the TechBook LAB explored a fundamental question: <em>Can AI agents define detailed software requirements without taking control of the business decisions?</em></p>
+          <p>Rather than asking AI to simply build an application, we followed a structured <strong>12-step requirements process</strong>, using three specialist AI agents and three human approval gates.</p>
+
+          <h3>How we did it</h3>
+          <p>We started with a human-defined business problem: a technician-booking solution for a technical services company, including web-based booking, technician coordination and AI-assisted WhatsApp interactions.</p>
+          <p>Three AI agents supported the process:</p>
+          <ul>
+            <li><a href="/lab/techbook/research-agent/"><strong>Research Agent</strong></a> — Investigated five existing field-service platforms using a six-step research method: Plan, Discover, Investigate, Compare, Verify and Synthesize. Findings were supported by an evidence register rather than treated as unquestioned facts.</li>
+            <li><a href="/lab/techbook/requirements-agent/"><strong>Requirements Agent</strong></a> — Followed the 12-step process, turning human intent and research into business scenarios, detailed requirements and measurable acceptance criteria. Where decisions were unclear, the agent proposed options for human approval.</li>
+            <li><a href="/lab/techbook/requirements-assurance-agent/"><strong>Requirements Assurance Agent</strong></a> — Independently challenged the specification for completeness, consistency, security, traceability and testability. Findings were corrected by the Requirements Agent and independently rechecked.</li>
+          </ul>
+
+          <h3>Three human approval gates</h3>
+          <ul class="techbook-gates">
+            <li><strong>Gate 1 — Business Intent:</strong> Are we solving the right problem?</li>
+            <li><strong>Gate 2 — Business Validation:</strong> Does the specification describe how the business should operate?</li>
+            <li><strong>Gate 3 — Requirements Baseline:</strong> Is the specification sufficiently assured and controlled to proceed to Design?</li>
+          </ul>
+          <p>Throughout the process, AI researched, proposed, documented and challenged. <strong>The human retained authority over scope, business rules, risk acceptance and approvals.</strong></p>
+
+          <h3>The resulting artifacts</h3>
+          <p>The Define phase produced nine business scenarios, 26 requirements and 39 acceptance criteria, organised into three core documents:</p>
+          <ul>
+            <li><a href="/lab/techbook/business-intent/"><strong>Business Intent Brief</strong></a> — The human-approved problem, scope, constraints and success measures.</li>
+            <li><a href="/lab/techbook/requirements-specification/"><strong>Requirements Specification</strong></a> — The detailed, testable definition of TechBook.</li>
+            <li><a href="/lab/techbook/requirements-decision-assurance-log/"><strong>Decision &amp; Assurance Log</strong></a> — The record of decisions, assurance findings, approvals and outstanding risks.</li>
+          </ul>
+          <p>The supporting <a href="/lab/techbook/market-research/"><strong>Market Research</strong></a> provides the external evidence behind the discovery work.</p>
+          <p><strong>Outcome:</strong> An independently reviewed requirements baseline, approved for Design, with unresolved technical feasibility risks explicitly recorded for subsequent verification.</p>
+          <p>The experiment demonstrated a disciplined division of responsibility:</p>
+          <p class="techbook-phase-principle"><strong>Human defines → AI researches and specifies → AI independently challenges → Human approves.</strong></p>
+
+          <h3>Read the full story</h3>
+          <p>For a detailed walkthrough of the 12-step process, how the agents collaborated, the human approval gates and the actual documents produced, read the Substack article:</p>
+          <p><a class="techbook-story-link" href="https://vicusbrits.substack.com/p/the-ai-didnt-decide-what-to-build" target="_blank" rel="noopener noreferrer"><strong>The AI Didn't Decide What to Build. We Did.</strong><ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a></p>
+          <p><em>The next LAB phase, DESIGN, explores how specialist agents turn these requirements into a solution architecture.</em></p>
+        </section>
+
+        <div class="techbook-phase-next">
+          <section class="techbook-phase" id="design" aria-labelledby="design-title">
+            <p class="eyebrow">PHASE 02</p>
+            <h2 id="design-title">DESIGN<span>.</span></h2>
+          </section>
+
+          <section class="techbook-phase" id="deliver" aria-labelledby="deliver-title">
+            <p class="eyebrow">PHASE 03</p>
+            <h2 id="deliver-title">DELIVER<span>.</span></h2>
+          </section>
+
+          <section class="techbook-phase" id="defend" aria-labelledby="defend-title">
+            <p class="eyebrow">PHASE 04</p>
+            <h2 id="defend-title">DEFEND<span>.</span></h2>
+          </section>
+        </div>
+      </div>
+    </section>
     <section class="section techbook-section" id="resources" aria-labelledby="resources-title">
       <div class="container">
         <p class="eyebrow">PROJECT ARTEFACTS</p>

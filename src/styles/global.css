@@ -150,6 +150,30 @@ h3 { font-weight: 650; }
 .techbook-lead { max-width: 760px; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 600; line-height: 1.5; }
 .techbook-overview, .techbook-intro { max-width: 760px; }
 .techbook-section h2 { max-width: 800px; margin-bottom: 1.5rem; }
+.techbook-phase-overview { padding-top: clamp(2rem, 5vw, 4rem); }
+.techbook-phase-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+.techbook-phase-nav a { display: flex; align-items: center; gap: .75rem; min-height: 76px; padding: 1rem 1.25rem; background: #14283f; color: #fff; font-size: clamp(.85rem, 1.5vw, 1.05rem); font-weight: 800; letter-spacing: .06em; transition: background .2s, transform .2s; }
+.techbook-phase-nav a:hover { background: #185e64; transform: translateY(-2px); }
+.techbook-phase-nav span { color: #78c8c0; font-size: .75rem; }
+.techbook-phase { scroll-margin-top: 2rem; }
+.techbook-phase-define { max-width: 1000px; margin-inline: auto; padding: clamp(1.5rem, 5vw, 4rem); border-top: 8px solid #287f86; background: #f4f6f8; color: #536271; font-size: 1rem; line-height: 1.8; }
+.techbook-phase-define .eyebrow { color: #185e64; font-weight: 800; letter-spacing: .12em; }
+.techbook-phase h2 { margin: .25rem 0 1rem; color: #14283f; font-size: clamp(2.5rem, 7vw, 5rem); line-height: .98; letter-spacing: -.045em; }
+.techbook-phase h2 span { color: #287f86; }
+.techbook-phase h3 { margin: 2.5rem 0 .75rem; color: #14283f; font-size: 1.35rem; line-height: 1.35; }
+.techbook-phase p, .techbook-phase ul { max-width: 850px; }
+.techbook-phase ul { padding-left: 1.4rem; }
+.techbook-phase li + li { margin-top: .75rem; }
+.techbook-phase a:not(.techbook-phase-link):not(.techbook-story-link) { color: #185e64; text-decoration: underline; text-underline-offset: .15em; }
+.techbook-phase-lead { color: #287f86; font-size: clamp(1.2rem, 2.3vw, 1.65rem); font-weight: 700; line-height: 1.5; }
+.techbook-gates { list-style: none; padding: 0 !important; }
+.techbook-gates li { padding: .8rem 1rem; border-left: 3px solid #287f86; background: #fff; }
+.techbook-phase-principle { margin-top: 1.75rem; padding: 1.25rem 1.5rem; border-left: 4px solid #d6a65a; background: #fff; color: #14283f; font-size: clamp(1.05rem, 2vw, 1.35rem); }
+.techbook-story-link, .techbook-phase-link { display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; color: #185e64; font-weight: 800; text-decoration: underline; text-underline-offset: .2em; }
+.techbook-phase-next { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2.5rem, 6vw, 5rem); }
+.techbook-phase-next .techbook-phase { display: flex; flex-direction: column; align-items: flex-start; min-height: 100%; padding: clamp(1.5rem, 3vw, 2.5rem); border-top: 5px solid #287f86; background: #f4f6f8; color: #536271; line-height: 1.75; }
+.techbook-phase-next .techbook-phase-lead { margin-bottom: .75rem; }
+.techbook-phase-next .techbook-phase-link { margin-top: auto; padding-top: 1.25rem; }
 .techbook-plan { background: #f4f6f8; }
 .techbook-plan-intro, .plan-sequencing .body-copy { max-width: 850px; }
 .techbook-plan-intro strong { color: #14283f; }
@@ -253,11 +277,13 @@ h3 { font-weight: 650; }
   .approach-header > p { margin: 1.5rem 0 0; }
   .lab-grid { gap: 3rem; }
   .writing-grid { grid-template-columns: 1fr; }
-  .techbook-resource-grid, .plan-outcome-grid { grid-template-columns: 1fr; }
+  .techbook-resource-grid, .plan-outcome-grid, .techbook-phase-next { grid-template-columns: 1fr; }
+  .techbook-phase-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .newsletter { align-items: flex-start; flex-direction: column; }
   .footer-main, .footer-bottom { flex-direction: column; gap: 1.5rem; }
 }
 @media (max-width: 450px) {
+  .techbook-phase-nav { grid-template-columns: 1fr; }
   .section-number { display: none; }
   .focus-card { display: block; }
   .focus-card .card-top { margin-bottom: 2rem; }

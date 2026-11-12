@@ -12,7 +12,7 @@ export const site = {
   perspectivesSection: 'https://vicusbrits.substack.com/s/perspectives-ideas-observations-and',
   portrait: '/vicus-brits.webp' as string | null,
   navigation: [
-    { label: 'The Lab', href: '/#lab' },
+    { label: 'The Lab', href: 'https://www.vicusbrits.com/lab/techbook/' },
     { label: 'Writing', href: '/#writing' },
     { label: 'Connect', href: '/#connect' },
     { label: 'About', href: '/#about' },

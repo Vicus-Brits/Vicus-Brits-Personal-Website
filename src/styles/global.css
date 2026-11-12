@@ -116,12 +116,14 @@ h3 { font-weight: 650; }
 .diagram-orbit { position: absolute; border: 1px solid #8bc6c147; border-radius: 50%; }
 .orbit-outer { width: 255px; height: 255px; }
 .orbit-inner { width: 190px; height: 190px; }
-.diagram-center { width: 120px; height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .3rem; border: 1px solid #8bc6c1; border-radius: 50%; color: #fff; font-size: .61rem; font-weight: 700; letter-spacing: .15em; }
-.diagram-center strong { color: #d6a65a; font-size: 1rem; }
+.diagram-center { position: relative; display: flex; flex-direction: column; align-items: center; gap: .4rem; color: #fff; font-size: clamp(.85rem, 1.4vw, 1.1rem); font-weight: 600; letter-spacing: -.025em; text-align: center; }
+.diagram-center span:first-child { margin-bottom: .35rem; color: #85bcb9; font-size: .57rem; font-weight: 700; letter-spacing: .16em; }
+.diagram-center strong { color: #d6a65a; font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -.055em; }
 .diagram-point { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #d6a65a; }
 .point-one { transform: translate(-112px, -60px); }.point-two { transform: translate(95px, -7px); }.point-three { transform: translate(60px, 112px); }
 .preview-footer { padding-top: 1.1rem; border-top: 1px solid #ffffff29; }
-.lab-visual blockquote { margin: 2rem 0 0; padding-left: 1.4rem; border-left: 3px solid #d6a65a; font-size: clamp(1.1rem, 1.5vw, 1.3rem); font-weight: 600; line-height: 1.6; letter-spacing: -.025em; }
+.preview-footer a { display: inline-flex; align-items: center; gap: .4rem; color: #d6a65a; font-size: .68rem; letter-spacing: .02em; }
+.preview-footer a:hover { color: #fff; }
 .writing-section { background: #f4f6f8; }
 .lab-section + .writing-section { padding-top: clamp(2.5rem, 4vw, 4rem); }
 .writing-intro > .body-copy { max-width: 720px; margin-top: 1.8rem; }

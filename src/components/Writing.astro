@@ -42,25 +42,10 @@ const streams = [
         <p>This is where I explore those ideas, ask questions and share what I learn.</p>
       </div>
     </div>
-    <div class="writing-grid">
-      {streams.map(({ eyebrow, title, subtitle, paragraphs, cta, href, Icon }) => (
-        <article class="writing-card">
-          <div class="writing-card-top">
-            <span class="writing-card-eyebrow">{eyebrow}</span>
-            <span class="icon-box"><Icon size={22} stroke-width={1.5} aria-hidden="true" /></span>
-          </div>
-          <h3>{title}</h3>
-          <p class="writing-card-subtitle">{subtitle}</p>
-          <div class="writing-card-copy">
-            {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-          </div>
-          <a class="writing-card-link" href={href} target="_blank" rel="noopener noreferrer">{cta} <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
-        </article>
-      ))}
-    </div>
     <article class="writing-card featured-article" aria-labelledby="lab-article-title">
       <p class="writing-card-eyebrow">THE LAB &middot; TECHNOLOGY DELIVERY &amp; AI</p>
       <h3 id="lab-article-title">The LAB: The Changing Economics of Technology Delivery</h3>
+      <time class="article-date" datetime="2026-11-09">Published 9 November 2026</time>
       <div class="writing-card-copy">
         <p>AI is challenging the economics of technology delivery. Can one person, supported by AI, deliver what once required an entire technology team? The LAB is a practical experiment exploring how AI changes the cost, speed, quality and skills required to build software — and what that means for the future of technology organisations.</p>
       </div>
@@ -70,6 +55,7 @@ const streams = [
       <p class="writing-card-eyebrow">PERSPECTIVES &middot; SOFTWARE ENGINEERING &amp; AI</p>
       <h3 id="latest-perspectives-title">I Built a Website I Don't Know How to Maintain. And That's Fine.</h3>
       <p class="writing-card-subtitle">But would I run a bank that way?</p>
+      <time class="article-date" datetime="2026-11-09">Published 9 November 2026</time>
       <div class="writing-card-copy">
         <p>AI helped me build a website I couldn't maintain on my own. That's fine for a personal project, but what about critical financial systems? As AI changes how we build software, it raises a difficult question: how much understanding can we safely trade for speed, and what controls do we need in its place?</p>
       </div>
@@ -79,6 +65,7 @@ const streams = [
       <p class="writing-card-eyebrow">PERSPECTIVES &middot; SOFTWARE ENGINEERING &amp; AI</p>
       <h3 id="agile-waterfall-title">Now That Cars Can Fly, Do We Still Need Agile and Waterfall?</h3>
       <p class="writing-card-subtitle">AI gave software development wings. Are we still managing traffic lights?</p>
+      <time class="article-date" datetime="2026-11-08">Published 8 November 2026</time>
       <div class="writing-card-copy">
         <p>AI is dramatically changing how quickly we can build software. But are our development methodologies keeping up?</p>
         <p>Clear requirements suddenly matter more, while rapid AI-generated solutions introduce new questions about architecture, quality and accountability.</p>
@@ -87,11 +74,29 @@ const streams = [
       <a class="writing-card-link" href="https://vicusbrits.substack.com/p/now-that-cars-can-fly-do-we-still" target="_blank" rel="noopener noreferrer">Read the full article on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
     </article>
     <div class="newsletter">
-      <div>
-        <h3>Follow the thinking. Follow the experiment.</h3>
-        <p>Two streams of writing. One exploring what we can build. The other exploring what we think, question and learn along the way.</p>
+      <div class="newsletter-header">
+        <div>
+          <h3>Follow the thinking. Follow the experiment.</h3>
+          <p>Two streams of writing. One exploring what we can build. The other exploring what we think, question and learn along the way.</p>
+        </div>
+        <a class="button button-primary" href={site.publication} target="_blank" rel="noopener noreferrer">Read &amp; Subscribe on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
       </div>
-      <a class="button button-primary" href={site.publication} target="_blank" rel="noopener noreferrer">Read &amp; Subscribe on Substack <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+      <div class="writing-grid">
+        {streams.map(({ eyebrow, title, subtitle, paragraphs, cta, href, Icon }) => (
+          <article class="writing-card">
+            <div class="writing-card-top">
+              <span class="writing-card-eyebrow">{eyebrow}</span>
+              <span class="icon-box"><Icon size={22} stroke-width={1.5} aria-hidden="true" /></span>
+            </div>
+            <h3>{title}</h3>
+            <p class="writing-card-subtitle">{subtitle}</p>
+            <div class="writing-card-copy">
+              {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+            <a class="writing-card-link" href={href} target="_blank" rel="noopener noreferrer">{cta} <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+          </article>
+        ))}
+      </div>
     </div>
   </div>
 </section>

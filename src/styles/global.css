@@ -162,10 +162,13 @@ h3 { font-weight: 650; }
 .featured-article { margin-top: 1rem; }
 .featured-article h2, .featured-article h3, .featured-article .writing-card-copy { max-width: 760px; }
 .featured-article .writing-card-eyebrow { margin-bottom: 1.5rem; }
-.newsletter { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #dce3e6; }
-.newsletter h3 { margin-bottom: .65rem; font-size: 1.25rem; line-height: 1.3; }
-.newsletter p { max-width: 650px; margin-bottom: 0; color: #586976; font-size: .9rem; line-height: 1.75; }
+.article-date { display: block; margin-bottom: 1rem; color: #536271; font-size: .8rem; font-weight: 600; line-height: 1.5; }
+.newsletter { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #dce3e6; }
+.newsletter-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.newsletter-header h3 { margin-bottom: .65rem; font-size: 1.25rem; line-height: 1.3; }
+.newsletter-header p { max-width: 650px; margin-bottom: 0; color: #586976; font-size: .9rem; line-height: 1.75; }
 .newsletter .button { flex-shrink: 0; }
+.newsletter .writing-grid { margin-top: 2rem; }
 .techbook-hero { padding-block: clamp(4rem, 7vw, 7rem); background: #f4f6f8; }
 .techbook-back { display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; margin-bottom: 3rem; padding: .7rem 1rem; border: 1px solid #287f86; color: #185e64; background: #fff; font-size: .9rem; font-weight: 700; transition: background .2s, color .2s; }
 .techbook-back:hover { background: #287f86; color: #fff; }
@@ -305,7 +308,7 @@ h3 { font-weight: 650; }
   .writing-grid { grid-template-columns: 1fr; }
   .techbook-resource-grid, .plan-outcome-grid, .techbook-phase-next { grid-template-columns: 1fr; }
   .techbook-phase-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .newsletter { align-items: flex-start; flex-direction: column; }
+  .newsletter-header { align-items: flex-start; flex-direction: column; }
   .footer-main, .footer-bottom { flex-direction: column; gap: 1.5rem; }
 }
 @media (max-width: 450px) {

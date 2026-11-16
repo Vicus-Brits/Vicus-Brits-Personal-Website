@@ -1,0 +1,36 @@
+---
+import { ArrowDownRight, ArrowUpRight } from '@lucide/astro'
+import { site } from '../config/site'
+import SectionHeading from './SectionHeading.astro'
+---
+<section class="section portfolio-guide" aria-labelledby="portfolio-guide-title">
+  <div class="container">
+    <div class="portfolio-guide-intro">
+      <SectionHeading label="HOW IT FITS TOGETHER" title="One portfolio. A wider view of what AI means for business and software delivery." id="portfolio-guide-title" />
+      <p>This site brings together my Define, Design, Deliver, Defend approach, a hands-on experiment in software delivery, and the ideas and insights I gather along the way.</p>
+    </div>
+    <div class="portfolio-guide-grid">
+      <article class="portfolio-guide-card">
+        <span class="portfolio-guide-eyebrow">THE PORTFOLIO</span>
+        <h3>Principles, perspectives and people.</h3>
+        <p>Start with <a href="#approach">the principles</a> that guide my work. Explore <a href="#writing">key ideas and perspectives</a>, then learn more about <a href="#about">my background</a>, <a href="#focus">areas of focus</a> and <a href="#connect">how to connect</a>.</p>
+        <a class="portfolio-guide-link" href="#writing">Explore the portfolio <ArrowDownRight size={17} aria-hidden="true" /></a>
+      </article>
+      <article class="portfolio-guide-card portfolio-guide-lab">
+        <span class="portfolio-guide-eyebrow">THE LAB · A SEPARATE EXPERIMENT</span>
+        <h3>One human. AI across the software lifecycle.</h3>
+        <p>The Lab follows one person using AI through the software development lifecycle to uncover what software development means beyond the prompt. Follow the articles to see the experiment unfold.</p>
+        <div class="portfolio-guide-links">
+          <a class="portfolio-guide-link" href="/lab/techbook/">Explore the Lab <ArrowUpRight size={17} aria-hidden="true" /></a>
+          <a class="portfolio-guide-secondary" href={site.labSection} target="_blank" rel="noopener noreferrer">Follow the articles <ArrowUpRight size={15} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="portfolio-guide-card">
+        <span class="portfolio-guide-eyebrow">THE KNOWLEDGEBASE</span>
+        <h3>Questions, learning and observations.</h3>
+        <p>Writing captures what I learn in the process, alongside ideas sparked by books, experience and the constant flow of information around us.</p>
+        <a class="portfolio-guide-link" href="#writing">Read the writing and ideas <ArrowDownRight size={17} aria-hidden="true" /></a>
+      </article>
+    </div>
+  </div>
+</section>

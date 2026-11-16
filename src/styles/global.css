@@ -100,6 +100,27 @@ h3 { font-weight: 650; }
 .pillar p { margin-bottom: 0; color: #bdcbd3; font-size: .88rem; line-height: 1.75; }
 .approach-closing { margin: 3.8rem 0 0; padding-top: 1.7rem; border-top: 1px solid #ffffff36; color: #bdcbd3; font-size: 1rem; line-height: 1.7; }
 .approach-closing strong { color: #fff; }
+.portfolio-guide { background: #f4f6f8; }
+.portfolio-guide-intro { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(2rem, 6vw, 6rem); align-items: end; }
+.portfolio-guide-intro > p { max-width: 520px; margin-bottom: .15rem; color: #536271; font-size: 1rem; line-height: 1.8; }
+.portfolio-guide-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 3.5rem; }
+.portfolio-guide-card { display: flex; flex-direction: column; padding: clamp(1.5rem, 2.5vw, 2.25rem); background: #fff; border: 1px solid #e6ebed; }
+.portfolio-guide-lab { background: #14283f; border-color: #14283f; color: #fff; }
+.portfolio-guide-eyebrow { margin-bottom: 2rem; color: #287f86; font-size: .68rem; font-weight: 750; letter-spacing: .12em; }
+.portfolio-guide-lab .portfolio-guide-eyebrow { color: #85bcb9; }
+.portfolio-guide-card h3 { margin-bottom: .85rem; font-size: 1.25rem; line-height: 1.35; }
+.portfolio-guide-card p { margin-bottom: 1.5rem; color: #586976; font-size: .88rem; line-height: 1.75; }
+.portfolio-guide-card p a { color: #287f86; font-weight: 700; text-decoration: underline; text-decoration-color: #287f8640; text-underline-offset: .2em; }
+.portfolio-guide-lab p { color: #bdcbd3; }
+.portfolio-guide-lab p a { color: #85bcb9; }
+.portfolio-guide-links { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin-top: auto; padding-top: .5rem; }
+.portfolio-guide-link, .portfolio-guide-secondary { display: inline-flex; align-items: center; align-self: flex-start; gap: .5rem; margin-top: auto; color: #14283f; font-size: .82rem; font-weight: 700; }
+.portfolio-guide-links .portfolio-guide-link { margin-top: 0; }
+.portfolio-guide-lab .portfolio-guide-link { color: #fff; }
+.portfolio-guide-secondary { color: #d6a65a; }
+.portfolio-guide-link:hover, .portfolio-guide-secondary:hover { color: #287f86; }
+.portfolio-guide-lab .portfolio-guide-link:hover { color: #85bcb9; }
+.portfolio-guide-secondary:hover { color: #fff; }
 .lab-section { padding-bottom: clamp(2.5rem, 4vw, 4rem); }
 .lab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 7vw, 7rem); margin-top: 3.5rem; }
 .lab-copy h3 { color: #14283f; font-size: 1.22rem; letter-spacing: -.02em; line-height: 1.5; }
@@ -256,6 +277,8 @@ h3 { font-weight: 650; }
   .hero-grid { grid-template-columns: 1fr .8fr; gap: 2rem; }
   .hero-visual { padding-left: 0; }
   .focus-grid { grid-template-columns: 1fr; }
+  .portfolio-guide-grid { grid-template-columns: 1fr; }
+  .portfolio-guide-card { min-height: 250px; }
   .focus-card { display: grid; grid-template-columns: 1fr 2fr; column-gap: 2rem; }
   .focus-card .card-top { grid-row: span 3; margin-bottom: 0; align-self: start; }
   .focus-card h3 { margin-bottom: .8rem; }
@@ -269,6 +292,7 @@ h3 { font-weight: 650; }
   .desktop-nav { display: none; }
   .mobile-menu { display: block; }
   .hero-grid, .about-grid, .lab-grid, .connect-grid { grid-template-columns: 1fr; }
+  .portfolio-guide-intro { grid-template-columns: 1fr; gap: 1.5rem; }
   .hero-grid { padding-top: 4.5rem; gap: 3rem; }
   .hero-visual { max-width: 430px; padding-left: 1rem; }
   .hero-quote { left: 0; }

@@ -1,0 +1,89 @@
+---
+import { ArrowLeft, ArrowRight, ArrowUpRight } from '@lucide/astro'
+import SectionHeading from './SectionHeading.astro'
+
+const books = [
+  {
+    title: 'The Human-Agent Orchestrator: Leading and Scaling AI-Driven Organizations',
+    href: 'https://www.amazon.com/dp/B0HN7FCD8K',
+    cover: 'https://images-na.ssl-images-amazon.com/images/P/B0HN7FCD8K.01._SCLZZZZZZZ_SX500_.jpg',
+  },
+  {
+    title: 'Build: An Unorthodox Guide to Making Things Worth Making – An NYT Bestselling Entrepreneurship and Product Design Manual',
+    href: 'https://www.amazon.com/dp/0063046067',
+    cover: 'https://images-na.ssl-images-amazon.com/images/P/0063046067.01._SCLZZZZZZZ_SX500_.jpg',
+  },
+  {
+    title: 'Competing in the Age of AI: Strategy and Leadership When Algorithms and Networks Run the World',
+    href: 'https://www.amazon.co.za/dp/1633697622',
+    cover: 'https://images-na.ssl-images-amazon.com/images/P/1633697622.01._SCLZZZZZZZ_SX500_.jpg',
+  },
+  {
+    title: 'The Coming Wave: AI, Power and Our Future',
+    href: 'https://www.amazon.co.za/dp/1529923832',
+    cover: 'https://images-na.ssl-images-amazon.com/images/P/1529923832.01._SCLZZZZZZZ_SX500_.jpg',
+  },
+  {
+    title: 'Co-Intelligence: Living and Working with AI',
+    href: 'https://www.amazon.co.za/dp/0753560771',
+    cover: 'https://images-na.ssl-images-amazon.com/images/P/0753560771.01._SCLZZZZZZZ_SX500_.jpg',
+  },
+  {
+    title: 'How to Think With AI: Why the Same Tool Produces Genius for Some and Mediocrity for Others',
+    href: 'https://www.amazon.co.uk/How-Think-AI-Produces-Mediocrity-ebook/dp/B0H1SJZNK6',
+    cover: 'https://images-na.ssl-images-amazon.com/images/P/B0H1SJZNK6.01._SCLZZZZZZZ_SX500_.jpg',
+  },
+]
+---
+<section class="section library-section" id="library" aria-labelledby="library-title">
+  <div class="container">
+    <SectionHeading label="CURRENT READING" title="The Library." id="library-title" />
+    <div class="library-carousel" data-library-carousel aria-label="Books Vicus Brits is reading">
+      <button class="library-control" type="button" data-library-previous aria-label="Previous book">
+        <ArrowLeft size={20} aria-hidden="true" />
+      </button>
+      <div class="library-book-window">
+        {books.map((book, index) => (
+          <article class="library-book" data-library-slide role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${books.length}`} hidden={index !== 0}>
+            <a class="library-book-cover" href={book.href} target="_blank" rel="noopener noreferrer" aria-label={`View ${book.title} on Amazon (opens in a new tab)`}>
+              <img src={book.cover} alt={`Cover of ${book.title}`} loading="lazy" />
+            </a>
+            <div class="library-book-copy">
+              <p class="library-book-label">CURRENTLY READING</p>
+              <h3>{book.title}</h3>
+              <a class="library-book-link" href={book.href} target="_blank" rel="noopener noreferrer">
+                View on Amazon <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <button class="library-control" type="button" data-library-next aria-label="Next book">
+        <ArrowRight size={20} aria-hidden="true" />
+      </button>
+      <p class="library-status" data-library-status aria-live="polite">01 / {String(books.length).padStart(2, '0')}</p>
+    </div>
+  </div>
+</section>
+<script>
+  const carousel = document.querySelector<HTMLElement>('[data-library-carousel]')
+
+  if (carousel) {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>('[data-library-slide]'))
+    const status = carousel.querySelector<HTMLElement>('[data-library-status]')
+    let currentIndex = 0
+
+    const showSlide = (index: number) => {
+      currentIndex = (index + slides.length) % slides.length
+      slides.forEach((slide, slideIndex) => {
+        slide.hidden = slideIndex !== currentIndex
+      })
+      if (status) {
+        status.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`
+      }
+    }
+
+    carousel.querySelector('[data-library-previous]')?.addEventListener('click', () => showSlide(currentIndex - 1))
+    carousel.querySelector('[data-library-next]')?.addEventListener('click', () => showSlide(currentIndex + 1))
+  }
+</script>

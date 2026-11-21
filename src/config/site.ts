@@ -9,6 +9,7 @@ export const site = {
   publication: 'https://vicusbrits.substack.com',
   labSection: 'https://vicusbrits.substack.com/s/the-lab-one-human-ai-in-the-loop',
   techbookArticle: 'https://vicusbrits.substack.com/p/define-design-deliver-defend-engineering',
+  artifactCentredArticle: 'https://vicusbrits.substack.com/p/artifact-centred-ai-engineering',
   perspectivesSection: 'https://vicusbrits.substack.com/s/perspectives-ideas-observations-and',
   portrait: '/vicus-brits.webp' as string | null,
   navigation: [

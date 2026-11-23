@@ -17,6 +17,8 @@ const books = [
     title: 'Competing in the Age of AI: Strategy and Leadership When Algorithms and Networks Run the World',
     href: 'https://www.amazon.co.za/dp/1633697622',
     cover: 'https://images-na.ssl-images-amazon.com/images/P/1633697622.01._SCLZZZZZZZ_SX500_.jpg',
+    completed: true,
+    comment: 'What I took from this book is that digital firms scale through digital-first models and expand their scope through composable architecture. Designing AI factories thoughtfully will require new and different operating models.',
   },
   {
     title: 'The Coming Wave: AI, Power and Our Future',
@@ -27,18 +29,22 @@ const books = [
     title: 'Co-Intelligence: Living and Working with AI',
     href: 'https://www.amazon.co.za/dp/0753560771',
     cover: 'https://images-na.ssl-images-amazon.com/images/P/0753560771.01._SCLZZZZZZZ_SX500_.jpg',
+    completed: true,
+    comment: 'A question worth sitting with is whether AI is sentient: can a submarine swim, and can an AI be sentient? The book also made me think about how our expertise shapes what we see: AI can seem remarkably capable when we know little about a subject, but merely average when we know it well. My deduction is that AI may be most useful precisely where it is most dangerous: in areas where we lack the expertise to judge its answers.',
   },
   {
     title: 'How to Think With AI: Why the Same Tool Produces Genius for Some and Mediocrity for Others',
     href: 'https://www.amazon.co.uk/How-Think-AI-Produces-Mediocrity-ebook/dp/B0H1SJZNK6',
     cover: 'https://images-na.ssl-images-amazon.com/images/P/B0H1SJZNK6.01._SCLZZZZZZZ_SX500_.jpg',
+    completed: true,
+    comment: 'One thing this book reinforced for me is that answer quality depends not only on the prompt, but also on how likely the model is to be right. The low-probability edge cases are often the most important. A result can look convincing and still carry risk, so we need to be deliberate about what we check and how.',
   },
 ]
 ---
 <section class="section library-section" id="library" aria-labelledby="library-title">
   <div class="container">
-    <SectionHeading label="CURRENT READING" title="The Library." id="library-title" />
-    <div class="library-carousel" data-library-carousel aria-label="Books Vicus Brits is reading">
+    <SectionHeading label="BOOKS & TAKEAWAYS" title="The Library." id="library-title" />
+    <div class="library-carousel" data-library-carousel aria-label="Books and reading notes by Vicus Brits">
       <button class="library-control" type="button" data-library-previous aria-label="Previous book">
         <ArrowLeft size={20} aria-hidden="true" />
       </button>
@@ -49,8 +55,9 @@ const books = [
               <img src={book.cover} alt={`Cover of ${book.title}`} loading="lazy" />
             </a>
             <div class="library-book-copy">
-              <p class="library-book-label">CURRENTLY READING</p>
+              <p class="library-book-label">{book.completed ? 'COMPLETED' : 'CURRENTLY READING'}</p>
               <h3>{book.title}</h3>
+              {book.comment && <p class="library-book-comment"><strong>My takeaway:</strong> {book.comment}</p>}
               <a class="library-book-link" href={book.href} target="_blank" rel="noopener noreferrer">
                 View on Amazon <ArrowUpRight size={17} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span>
               </a>

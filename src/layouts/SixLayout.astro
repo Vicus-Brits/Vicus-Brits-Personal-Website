@@ -1,0 +1,41 @@
+---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import Layout from './Layout.astro'
+
+interface Props {
+  frontmatter: {
+    title: string
+    description: string
+  }
+}
+
+const { frontmatter } = Astro.props
+---
+<Layout title={frontmatter.title} description={frontmatter.description} noindex>
+  <Header />
+  <main id="main">
+    <section class="section six-programme">
+      <article class="container six-content">
+        <slot />
+      </article>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .six-programme { background: #f4f6f8; }
+  :global(.six-content h1) { max-width: 900px; margin-bottom: 1rem; font-size: clamp(2.5rem, 5vw, 4.5rem); }
+  :global(.six-content h2) { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #dce3e6; }
+  :global(.six-content h3) { margin-top: 2rem; font-size: 1.25rem; line-height: 1.35; }
+  :global(.six-content p),
+  :global(.six-content li) { color: #536271; line-height: 1.8; }
+  :global(.six-content ul),
+  :global(.six-content ol) { padding-left: 1.4rem; }
+  :global(.six-content li) { margin-bottom: .55rem; }
+  :global(.six-content table) { display: block; width: 100%; margin: 1.5rem 0 2.5rem; overflow-x: auto; border-collapse: collapse; background: #fff; }
+  :global(.six-content th),
+  :global(.six-content td) { min-width: 9rem; padding: .85rem 1rem; border: 1px solid #dce3e6; text-align: left; vertical-align: top; }
+  :global(.six-content th) { color: #14283f; font-size: .8rem; }
+</style>

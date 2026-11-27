@@ -6,9 +6,10 @@ import { site } from '../config/site'
 interface Props {
   title?: string
   description?: string
+  noindex?: boolean
 }
 
-const { title = site.title, description = site.description } = Astro.props
+const { title = site.title, description = site.description, noindex = false } = Astro.props
 const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 
@@ -19,6 +20,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
